@@ -1,5 +1,7 @@
-import { Client } from "discord.js";
+import { BotClient} from "./structures/Client";
 
-console.log("Bot is starting...");
+require("dotenv").config();
 
-const app = new Client({ intents: 32767 });
+export const client = new BotClient();
+
+client.start();
